@@ -11,6 +11,8 @@ public class WaypointMover : MonoBehaviour
 
     [SerializeField] private float distanceThreshold = 0.1f;
 
+    bool breathOut;
+
     //The curent waypoint target that the object is moving towards
     private Transform currentWaypoint;
 
@@ -24,16 +26,25 @@ public class WaypointMover : MonoBehaviour
         //Set the next waypoint target
         currentWaypoint = waypoints.GetNextWaypoint(currentWaypoint);
         transform.LookAt(currentWaypoint);
+        breathOut = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, currentWaypoint.position, moveSpeed * Time.deltaTime);
-        if (Vector3.Distance(transform.position, currentWaypoint.position) < distanceThreshold)
+        if (breathOut == true)
         {
-            currentWaypoint = waypoints.GetNextWaypoint(currentWaypoint);
-            transform.LookAt(currentWaypoint);
+            transform.position = Vector3.MoveTowards(transform.position, currentWaypoint.position, moveSpeed * Time.deltaTime);
+            if (Vector3.Distance(transform.position, currentWaypoint.position) < distanceThreshold)
+            {
+                currentWaypoint = waypoints.GetNextWaypoint(currentWaypoint);
+                transform.LookAt(currentWaypoint);
+                breathOut = false;
+                Debug.Log("Waypoint Check");
+            }
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+            breathOut = true;
     }
 }

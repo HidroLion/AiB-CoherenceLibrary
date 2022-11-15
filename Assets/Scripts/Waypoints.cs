@@ -9,7 +9,7 @@ public class Waypoints : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        foreach(Transform t in transform)
+        foreach (Transform t in transform)
         {
             Gizmos.color = Color.blue;
             Gizmos.DrawWireSphere(t.position, waypointSize);

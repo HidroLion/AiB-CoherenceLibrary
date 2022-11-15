@@ -630,7 +630,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1711276374}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 858d64ebb5b2e4e458dcd96620dff719, type: 3}
+  m_Script: {fileID: 11500000, guid: 820b974202c22d049bcf129b1127e244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: {fileID: 1995532447}
@@ -755,10 +755,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1995532446}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 511131d6abba44a498e5b87b1ea91337, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f21e0fee7b98294cbb93bd2bbc6eb44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypointSize: 0.958
+  waypointSize: 1
 --- !u!4 &1995532448
 Transform:
   m_ObjectHideFlags: 0
