@@ -6,28 +6,22 @@ public class WaypointMover : MonoBehaviour
 {
     //Stores a reference to the waypoint system this object will use
     [SerializeField] private Waypoints waypoints;
+    [SerializeField] BreathInput breathInput;
+    [SerializeField] AnimationCurve speedCurve;
 
     //Temp Variable
     [SerializeField] private float moveSpeed = 5f;
-
-    [SerializeField] private float distanceThreshold = 0.1f;
-
     bool breathOut;
+    [SerializeField] private float distanceThreshold = 0.1f;
+    //END Temp Variables
+
     bool delayMovement;
 
     float timer;
     [SerializeField] float delayTime;
 
-    //Default Values
-    float breathValue;
-    [SerializeField] AnimationCurve breathCurve;
-
     //The curent waypoint target that the object is moving towards
     private Transform currentWaypoint;
-
-    //Reference to the Breath Propierties for anothe Scripts
-    public float BreathValue { get => breathValue; set => breathValue = value; }
-    public AnimationCurve BreathCurve { get => breathCurve; set => breathCurve = value; }
 
     // Start is called before the first frame update
     void Start()
@@ -47,10 +41,10 @@ public class WaypointMover : MonoBehaviour
     void Update()
     {
         //When BreathValue Changes, the player will move to the next waypoint.
-        if (breathValue != 0f && !delayMovement)
+        if (breathInput.BreathValue != 0f && !delayMovement)
         {
-            Debug.Log("[Breath Value Changed] Starting Movement");
-            BreathMovement(BreathCurve.Evaluate(Mathf.Abs(BreathValue)));
+            //Debug.Log("[Breath Value Changed] Starting Movement");
+            BreathMovement(speedCurve.Evaluate(Mathf.Abs(breathInput.BreathValue)) * moveSpeed);
         }
 
         if (delayMovement)
@@ -84,7 +78,7 @@ public class WaypointMover : MonoBehaviour
             currentWaypoint = waypoints.GetNextWaypoint(currentWaypoint);
             transform.LookAt(currentWaypoint);
             Debug.Log("[Waypoint Check] Finish Movement - Starting Delay");
-            breathValue = 0f;
+            breathInput.BreathValue = 0f;
             delayMovement = true;
 
 #if UNITY_EDITOR
