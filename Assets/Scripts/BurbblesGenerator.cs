@@ -15,7 +15,22 @@ public class BurbblesGenerator : MonoBehaviour
     private void Update()
     {
         var emission = particle.emission;
-        emission.rateOverTime = breathInput.BreathValue * emissionMulti;
+        emission.rateOverTime = particlesRate.Evaluate(breathInput.BreathValue) * emissionMulti;
+
+        var main = particle.main;
+        main.startSpeed = breathInput.BreathValue;
+
+        var shape = particle.shape;
+        if(breathInput.BreathValue <= 0)
+        {
+            shape.rotation = Vector3.up * 180;
+            shape.radius = 1;
+        }
+        else if (breathInput.BreathValue > 0)
+        {
+            shape.rotation = Vector3.zero;
+            shape.radius = 2;
+        }
     }
 
 }

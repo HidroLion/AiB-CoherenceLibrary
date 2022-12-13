@@ -44,7 +44,7 @@ public class WaypointMover : MonoBehaviour
         if (breathInput.BreathValue != 0f && !delayMovement)
         {
             //Debug.Log("[Breath Value Changed] Starting Movement");
-            BreathMovement(speedCurve.Evaluate(Mathf.Abs(breathInput.BreathValue)) * moveSpeed);
+            BreathMovement(speedCurve.Evaluate(breathInput.BreathValue) * moveSpeed);
         }
 
         if (delayMovement)
@@ -59,6 +59,7 @@ public class WaypointMover : MonoBehaviour
         }
 
         //Debuging Mode > This code Only Runs in the Unity Editor
+        /*
 #if UNITY_EDITOR
         if (breathOut && !delayMovement)
         {
@@ -68,6 +69,7 @@ public class WaypointMover : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
             breathOut = true;
 #endif
+        */
     }
 
     public void BreathMovement(float speed)
