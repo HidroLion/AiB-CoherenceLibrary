@@ -245,8 +245,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClips:
+  - {fileID: 8300000, guid: 576a734ba10ce9545ac2f80593cf7ac0, type: 3}
   - {fileID: 8300000, guid: 3b32251b185ecc04db66a736b7a3e285, type: 3}
   - {fileID: 8300000, guid: b3eb9632234fad44c87b28fc5aa1dedb, type: 3}
+  - {fileID: 8300000, guid: 58876eb7ccdaa3647a7bc6677c58688a, type: 3}
+  soundTime: 0.5
 --- !u!82 &18667801
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4127,6 +4130,7 @@ GameObject:
   - component: {fileID: 1690365790}
   - component: {fileID: 1690365789}
   - component: {fileID: 1690365788}
+  - component: {fileID: 1690365791}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -4212,6 +4216,53 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1690365786}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1690365791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690365786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b42adf3a1fdd19c419f8a60bb0421fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breathInput: {fileID: 18667795}
+  sizeMultipliyer: 0.5
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -1
+      value: 1.5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0.05462174
+      outSlope: 0.05462174
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.116566904
+    - serializedVersion: 3
+      time: 1
+      value: 0.5
+      inSlope: 0.07169577
+      outSlope: 0.07169577
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.12500006
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1767138942
 GameObject:
   m_ObjectHideFlags: 0
