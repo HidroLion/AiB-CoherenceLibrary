@@ -32,6 +32,7 @@ public class SoundController : MonoBehaviour
             }
         }
 
+        /*
         if (Input.GetKeyDown(KeyCode.Q) && !Input.GetKeyDown(KeyCode.E))
         {
             delay = true;
@@ -52,6 +53,23 @@ public class SoundController : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.E))
         {
             PlaySound(audioClips[3]);
+        }
+        */
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            audioSource.PlayOneShot(audioClips[0], 1);
+            //audioSource.PlayOneShot(audioClips[1], 0.5f);
+            audioSelect = 4;
+            delay = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            audioSource.PlayOneShot(audioClips[2], 1);
+            //audioSource.PlayOneShot(audioClips[3], 0.5f);
+            audioSelect = 5;
+            delay = true;
         }
     }
 

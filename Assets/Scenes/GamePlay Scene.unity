@@ -218,7 +218,7 @@ MonoBehaviour:
   breathInput: {fileID: 18667795}
   emissionMultiplier: 4
   deltaSpeed: 0.3
-  keepTime: 3
+  keepTime: 2
 --- !u!114 &18667799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,11 +245,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClips:
-  - {fileID: 8300000, guid: 576a734ba10ce9545ac2f80593cf7ac0, type: 3}
-  - {fileID: 8300000, guid: 3b32251b185ecc04db66a736b7a3e285, type: 3}
-  - {fileID: 8300000, guid: b3eb9632234fad44c87b28fc5aa1dedb, type: 3}
-  - {fileID: 8300000, guid: 58876eb7ccdaa3647a7bc6677c58688a, type: 3}
-  soundTime: 0.5
+  - {fileID: 8300000, guid: fb74731b7f8900942aeffd9aa2b5b6f8, type: 3}
+  - {fileID: 8300000, guid: 3c044bec54aa05343a7304c00224d248, type: 3}
+  - {fileID: 8300000, guid: f157454622c038144a008ad2093dbf32, type: 3}
+  - {fileID: 8300000, guid: 8d0268efcb2e3044db1b5f13900b5428, type: 3}
+  - {fileID: 8300000, guid: a8d9871507dcdac48a717a540f98fc71, type: 3}
+  - {fileID: 8300000, guid: 6b8dda6876bc09646a307cc30c8996cd, type: 3}
+  soundTime: 2
 --- !u!82 &18667801
 AudioSource:
   m_ObjectHideFlags: 0
