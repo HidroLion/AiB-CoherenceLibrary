@@ -1,0 +1,115 @@
+{
+	"title": "Breath Pattern",
+	"description": "Defines the structure of a breath pattern",
+	"type": "object",
+	"properties": {
+		"$schema": {
+			"type": "string",
+			"pattern": "BreathPattern.schema.json$"
+		},
+		"name": {
+			"type": "string",
+			"description": "The name of the breath pattern"
+		},
+		"comments": {
+			"type": "string",
+			"description": "The comments tied to the breath pattern"
+		},
+		"length": {
+			"type": "number",
+			"description": "The total time (in seconds) of the breath pattern"
+		},
+		"overrideConstants": {
+			"type": "boolean",
+			"description": "Whether or not to assume In/Out, Yes/No, Mouth/Nasal should be constant between keyframes and must be 0 or 1. If true, the values will not be treated as constants and CAN HAVE INBETWEEN VALUE."
+		},
+		"keyframes": {
+			"type": "array",
+			"description": "The keyframes of the breath pattern",
+			"items": {
+				"type": "object",
+				"description": "The keyframe of the breath pattern",
+				"properties": {
+					"time": {
+						"type": "number",
+						"description": "The time the keyframe occurs",
+						"minimum": 0,
+						"maximum": 1
+					},
+					"transition": {
+						"type": "number",
+						"description": "Method which is used to blend the time between two keyframes. Constant = 0, Linear = 1, Cosine = 2, Square = 3, Cubic = 4, SquareRoot = 5. -1 is a Hols, where the value is treated constant unless used with a hold compatible system, in which case the value can be held as long as needed before starting the next keyframe.",
+						"minimum": -1
+					},
+					"target": {
+						"type": "object",
+						"description": "The target state of the keyframe",
+						"properties": {
+							"No": {
+								"type": "number",
+								"description": "The No (or 1 - YES) value of the breath pattern",
+								"minimum": 0,
+								"maximum": 1
+							},
+							"Yes": {
+								"type": "number",
+								"description": "The Yes (or 1 - No) value of the breath pattern",
+								"minimum": 0,
+								"maximum": 1
+							},
+							"In": {
+								"type": "number",
+								"description": "The In (or 1 - Out) value of the breath pattern",
+								"minimum": 0,
+								"maximum": 1
+							},
+							"Out": {
+								"type": "number",
+								"description": "The Out (or 1 - In) value of the breath pattern",
+								"minimum": 0,
+								"maximum": 1
+							},
+							"Nasal": {
+								"type": "number",
+								"description": "The Nasal (or 1 - Mouth) value of the breath pattern",
+								"minimum": 0,
+								"maximum": 1
+							},
+							"Mouth": {
+								"type": "number",
+								"description": "The Mouth (or 1 - Nasal) value of the breath pattern",
+								"minimum": 0,
+								"maximum": 1
+							},
+							"Pitch": {
+								"type": "number",
+								"description": "The Pitch value of the breath pattern",
+								"minimum": 0,
+								"maximum": 5000
+							},
+							"Volume": {
+								"type": "number",
+								"description": "The Volume value of the breath pattern",
+								"minimum": 0,
+								"maximum": 1
+							}
+						},
+						"additionalProperties": false
+					}
+				},
+				"required": [
+					"time",
+					"target"
+				],
+				"additionalProperties": false
+			}
+		}
+	},
+	"required": [
+		"name",
+		"length",
+		"keyframes",
+		"$schema"
+	],
+	"additionalProperties": false
+}

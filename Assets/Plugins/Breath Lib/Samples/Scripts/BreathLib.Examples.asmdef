@@ -1,0 +1,16 @@
+{
+    "name": "BreathLib.Examples",
+    "rootNamespace": "",
+    "references": [
+        "GUID:897c3ea81fe44a4498d151d971fa647c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

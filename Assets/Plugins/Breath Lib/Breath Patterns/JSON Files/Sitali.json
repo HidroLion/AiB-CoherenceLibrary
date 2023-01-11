@@ -1,0 +1,18 @@
+{
+	"$schema": "../BreathPattern.schema.json",
+	"name": "Sitali",
+	"comments": "A cooling breath that is used to cool the body and mind. Inhale through small opening in mouth and exhale through nose. For proper breathing, the tongue should be curled into a tube shape while inhaling.",
+	"length": 6,
+	"keyframes": [
+		{
+			"target": { "In": 1.0, "Yes": 1.0, "Mouth": 1.0, "Pitch": 0.8 },
+			"time": 0.0,
+			"transition": 0
+		},
+		{
+			"target": { "Out": 1.0, "Nasal": 1.0, "Pitch": 0.5 },
+			"time": 0.42857,
+			"transition": 0
+		}
+	]
+}

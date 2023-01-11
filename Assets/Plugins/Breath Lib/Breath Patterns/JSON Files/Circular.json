@@ -1,0 +1,37 @@
+{
+	"$schema": "../BreathPattern.schema.json",
+	"name": "Circular",
+	"length": 9.0,
+	"keyframes": [
+		{
+			"target": { "In": 1.0, "No": 0.0 },
+			"time": 0.0,
+			"transition": 0
+		},
+		{
+			"target": { "Out": 1.0 },
+			"time": 0.5,
+			"transition": 0
+		},
+		{
+			"target": { "Volume": 0.1 },
+			"time": 0.0,
+			"transition": 2
+		},
+		{
+			"target": { "Volume": 0.9 },
+			"time": 0.25,
+			"transition": 2
+		},
+		{
+			"target": { "Volume": 0.1 },
+			"time": 0.5,
+			"transition": 2
+		},
+		{
+			"target": { "Volume": 0.9 },
+			"time": 0.75,
+			"transition": 2
+		}
+	]
+}

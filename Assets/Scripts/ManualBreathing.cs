@@ -1,3 +1,4 @@
+using BreathLib.Unity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,8 @@ public class ManualBreathing : MonoBehaviour
     float timer;
     bool wait;
 
+    public DetectorManager detectorManager;
+
     public bool Wait { get => wait; set => wait = value; }
 
     private void Start()
@@ -23,6 +26,7 @@ public class ManualBreathing : MonoBehaviour
 
     private void Update()
     {
+        /*
         if (Input.GetKey(KeyCode.Q) && !Wait)
         {
             inputValue -= deltaSpeed * Time.deltaTime * emissionMultiplier;
@@ -59,5 +63,23 @@ public class ManualBreathing : MonoBehaviour
         }
 
         breathInput.BreathValue = inputValue;
+        */
+
+        var breathStream = detectorManager.BreathStream;
+        var sample = breathStream.Last;
+
+        if(sample.In > 0.5f)
+        {
+            float actualBreathIn = sample.In.Value * sample.Yes.Value;
+            inputValue = actualBreathIn;
+            breathInput.BreathValue = inputValue * -1;
+        }
+
+        if (sample.Out > 0.5f)
+        {
+            float actualBreathIn = sample.Out.Value * sample.Yes.Value;
+            inputValue = actualBreathIn;
+            breathInput.BreathValue = inputValue;
+        }
     }
 }

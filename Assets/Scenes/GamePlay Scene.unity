@@ -219,6 +219,7 @@ MonoBehaviour:
   emissionMultiplier: 4
   deltaSpeed: 0.3
   keepTime: 2
+  detectorManager: {fileID: 1318829172}
 --- !u!114 &18667799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3436,6 +3437,90 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1301470963}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1318829171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1318829173}
+  - component: {fileID: 1318829172}
+  m_Layer: 0
+  m_Name: Braath Detector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1318829172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318829171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33fa070dcc124a04e8eebf26d29fc9ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DetectorController:
+    breathStream:
+      streamCapacity: 100
+      samplingRate: 0.02
+    detectors:
+    - detectorObject:
+        mode: 1
+        excludesUnityObjects: 0
+        unityReference: {fileID: 0}
+        rawReference:
+          rid: 7023524412974432256
+      weight: 1
+      useIndividualWeights: 0
+      yesNoWeight: 0
+      inOutWeight: 0
+      nasalMouthWeight: 0
+      pitchWeight: 0
+      volumeWeight: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 7023524412974432256
+      type: {class: KeyboardBreathDetect, ns: , asm: BreathLib}
+      data:
+        InKey: 276
+        OutKey: 275
+        InOut_ChangeSpeed: 0.17
+        YesNo_ChangeSpeed: 0.17
+        UseMouthNose: 1
+        MouthKey: 273
+        NoseKey: 274
+        MouthNose_ChangeSpeed: 0.17
+        UseVolume: 1
+        VolumeUpKey: 119
+        VolumeDownKey: 115
+        Volume_ChangeSpeed: 0.5
+        UsePitch: 1
+        PitchUpKey: 100
+        PitchDownKey: 97
+        Pitch_ChangeSpeed: 0.5
+--- !u!4 &1318829173
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318829171}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1361028993
 GameObject:
   m_ObjectHideFlags: 0

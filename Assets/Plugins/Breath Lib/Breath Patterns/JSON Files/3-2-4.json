@@ -1,0 +1,25 @@
+{
+	"$schema": "../BreathPattern.schema.json",
+	"name": "3-2-4",
+	"comments": "a-b-c breaths follow: 'a' second in breath through the nose followed by 'b' second hold followed by 'c' second out breath through the mouth.",
+	"length": 9,
+	"keyframes": [
+		{
+			"target": { "In": 1.0, "Yes": 1.0, "Nasal": 1.0 },
+			"time": 0.0,
+			"transition": 0
+		},
+
+		{
+			"target": { "No": 1.0 },
+			"time": 0.33333,
+			"transition": 0
+		},
+
+		{
+			"target": { "Out": 1.0, "Yes": 1.0, "Mouth": 1.0 },
+			"time": 0.55556,
+			"transition": 0
+		}
+	]
+}

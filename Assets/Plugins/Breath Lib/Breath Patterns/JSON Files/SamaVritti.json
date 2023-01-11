@@ -1,0 +1,19 @@
+{
+	"$schema": "../BreathPattern.schema.json",
+	"name": "Sama Vritti",
+	"comments": "Also known as equal breathing. Inhales and exhales where the inhale and exhale are the same length.",
+	"length": 8,
+	"keyframes": [
+		{
+			"target": { "In": 1.0, "Yes": 1.0 },
+			"time": 0.0,
+			"transition": 0
+		},
+
+		{
+			"target": { "Out": 1.0, "Yes": 1.0 },
+			"time": 0.5,
+			"transition": 0
+		}
+	]
+}

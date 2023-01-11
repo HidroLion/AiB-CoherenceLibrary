@@ -1,0 +1,28 @@
+{
+	"$schema": "../BreathPattern.schema.json",
+	"name": "Square",
+	"comments": "Aslo known as box breathing, this pattern is a simple 4:4:4:4 breathing pattern following the pattern inhale, hold, exhale, hold.",
+	"length": 16.0,
+	"keyframes": [
+		{
+			"target": { "In": 1.0, "No": 0.0 },
+			"time": 0.0,
+			"transition": 0
+		},
+		{
+			"target": { "No": 1.0 },
+			"time": 0.25,
+			"transition": 0
+		},
+		{
+			"target": { "Out": 1.0, "No": 0.0 },
+			"time": 0.50,
+			"transition": 0
+		},
+		{
+			"target": { "No": 1.0 },
+			"time": 0.75,
+			"transition": 0
+		}
+	]
+}

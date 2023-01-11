@@ -1,0 +1,2 @@
+# Breath Lib - Core
+The core of the Breath Lib. The core contains the logic for the Breath Lib, excluding any Platform/Engine specific code. The core contains data structures, algorithms, and other utilities that are used throughout the Breath Lib, regardless of the Platform/Engine.

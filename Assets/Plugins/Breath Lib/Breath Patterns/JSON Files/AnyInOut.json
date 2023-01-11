@@ -1,0 +1,30 @@
+{
+	"$schema": "../BreathPattern.schema.json",
+	"name": "Any In Out",
+	"comments": "Matches any in/out pattern of breathing assuming the in/out is more than .5s long, where the in an out can be differing lengths.",
+	"length": 6,
+	"keyframes": [
+
+		{
+			"target": { "In": 1.0, "Yes": 1.0 },
+			"time": 0.0,
+			"transition": 0
+		},
+		{
+			"target": { },
+			"time": 0.08333,
+			"transition": -1
+		},
+
+		{
+			"target": { "Out": 1.0 },
+			"time": 0.5,
+			"transition": 0
+		},
+		{
+			"target": { },
+			"time": 0.58333,
+			"transition": -1
+		}
+	]
+}

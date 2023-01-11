@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3147307e5959d194886eadecdf69e4c3, type: 3}
+  m_Name: ScriptableBreathDetector
+  m_EditorClassIdentifier: 
+  DetectorType:
+    mode: 1
+    excludesUnityObjects: 0
+    unityReference: {fileID: 0}
+    rawReference:
+      rid: 1582453478562201617
+  references:
+    version: 2
+    RefIds:
+    - rid: 1582453478562201617
+      type: {class: KeyboardBreathDetect, ns: , asm: Assembly-CSharp-firstpass}
+      data:
+        InKey: 276
+        OutKey: 275
+        InOut_ChangeSpeed: 0.3
+        UseMouthNose: 1
+        MouthKey: 273
+        NoseKey: 274
+        MouthNose_ChangeSpeed: 0.3
+        UseVolume: 1
+        VolumeUpKey: 119
+        VolumeDownKey: 115
+        Volume_ChangeSpeed: 0.5
+        UsePitch: 1
+        PitchUpKey: 100
+        PitchDownKey: 97
+        Pitch_ChangeSpeed: 0.5

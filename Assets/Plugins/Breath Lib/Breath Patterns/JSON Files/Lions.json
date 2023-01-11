@@ -1,0 +1,18 @@
+{
+	"$schema": "../BreathPattern.schema.json",
+	"name": "Loin's Breathing",
+	"comments": "A deep breath in through the nose, followed by a forceful exhale through the mouth. Similar to Kapalabhati breathing but with emphasis on a open mouth exhale rather than through the nose.",
+	"length": 7,
+	"keyframes": [
+		{
+			"target": { "In": 1.0, "Yes": 1.0, "Nasal": 1.0, "Volume": 0.2, "Pitch": 0.5 },
+			"time": 0.0,
+			"transition": 0
+		},
+		{
+			"target": { "Out": 1.0, "Volume": 1, "Mouth": 1.0, "Pitch": 0.15 },
+			"time": 0.666666,
+			"transition": 0
+		}
+	]
+}

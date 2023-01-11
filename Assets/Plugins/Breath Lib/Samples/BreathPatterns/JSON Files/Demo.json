@@ -1,0 +1,21 @@
+{
+	"$schema": "../../../Breath Patterns/BreathPattern.schema.json",
+	"name": "Demo Pattern",
+	"length": 1.2,
+	"keyframes": [
+		{
+			"target": {
+				"In": 1
+			},
+			"time": 0,
+			"transition": 0
+		},
+		{
+			"target": {
+				"In": 0
+			},
+			"time": 0.5,
+			"transition": 1
+		}
+	]
+}

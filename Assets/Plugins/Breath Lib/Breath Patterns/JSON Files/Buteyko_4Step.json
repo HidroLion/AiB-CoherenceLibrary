@@ -1,0 +1,43 @@
+{
+	"$schema": "../BreathPattern.schema.json",
+	"name": "Buteyko 4 part",
+	"comments": "Regular In then out breath, then short in and long out, followed by holding breath. All through the nose. Buteyko Breathing is a breathing technique that is used to treat asthma and other respiratory conditions. It is based on the principle that hyperventilation is the cause of asthma and other respiratory conditions. The technique involves breathing in through the nose and out through the mouth, with the mouth closed, and the lips pursed. The technique is named after its founder, Russian physician Konstantin Pavlovich Buteyko (1900-1987).",
+	"length": 20.5,
+	"keyframes": [
+
+		{
+			"target": { "In": 1.0, "Yes": 1.0, "Nasal": 0.0 },
+			"time": 0.0,
+			"transition": 0
+		},
+		{
+			"target": { "Out": 1.0 },
+			"time": 0.14634,
+			"transition": 0
+		},
+
+		{
+			"target": { "In": 1.0 },
+			"time": 0.29268,
+			"transition": 0
+		},
+
+		{
+			"target": { "Out": 1.0 },
+			"time": 0.36585,
+			"transition": 0
+		},
+
+
+		{
+			"target": { "No": 1.0 },
+			"time": 0.60976,
+			"transition": 0
+		},
+		{
+			"target": { "No": 1.0 },
+			"time": 0.85366,
+			"transition": -1
+		}
+	]
+}
