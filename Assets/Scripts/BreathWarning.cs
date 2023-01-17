@@ -4,28 +4,53 @@ using UnityEngine;
 
 public class BreathWarning : MonoBehaviour
 {
-    ManualBreathing controller;
+    BreathInput breathInput;
     bool warning;
+    float t;
+    int state;
+
     [SerializeField] Animator animator;
+    [SerializeField] float maxTime;
 
     private void Start()
     {
+        breathInput = GetComponent<BreathInput>();
+        t = 0;
         warning = false;
-        controller = GetComponent<ManualBreathing>();
     }
 
     private void Update()
     {
-        if(controller.Wait && !warning)
+        if(breathInput.BreathValue == 1 && (state == -1 || state == 0))
         {
+            animator.SetTrigger("Off");
             warning = true;
-            animator.SetTrigger("On");
+            state = 1;
+            t = 0;
+        }
+        if (breathInput.BreathValue == -1 && (state == 1 || state == 0))
+        {
+            animator.SetTrigger("Off");
+            warning = true;
+            state = -1;
+            t = 0;
         }
 
-        if(!controller.Wait && warning)
+        if (breathInput.BreathValue == 0 && warning)
         {
-            warning = false;
             animator.SetTrigger("Off");
+            state = 0;
+            warning = false;
+        }
+
+        if (warning)
+        {
+            t += Time.deltaTime;
+            if(t >= maxTime)
+            {
+                warning = false;
+                animator.SetTrigger("On");
+            }
         }
     }
 }
