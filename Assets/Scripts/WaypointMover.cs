@@ -52,7 +52,7 @@ public class WaypointMover : MonoBehaviour
             timer += Time.deltaTime;
             if(timer >= delayTime)
             {
-                Debug.Log("[Delay Finished] Movement Ready");
+                //Debug.Log("[Delay Finished] Movement Ready");
                 delayMovement = false;
                 timer = 0f;
             }
@@ -79,7 +79,7 @@ public class WaypointMover : MonoBehaviour
         {
             currentWaypoint = waypoints.GetNextWaypoint(currentWaypoint);
             transform.LookAt(currentWaypoint);
-            Debug.Log("[Waypoint Check] Finish Movement - Starting Delay");
+            //Debug.Log("[Waypoint Check] Finish Movement - Starting Delay");
             breathInput.BreathValue = 0f;
             delayMovement = true;
 
