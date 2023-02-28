@@ -13,6 +13,7 @@ public class CyclesReader : MonoBehaviour
 
     public float[] BreathTimes { get => breathTimes; set => breathTimes = value; }
     public List<float[]> TimesList { get => timesList; set => timesList = value; }
+    public int State { get => state; }
 
     private void Start()
     {
